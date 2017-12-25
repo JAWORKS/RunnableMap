@@ -40,7 +40,7 @@ public class MainOperations {
 		}
 	}
 
-	//My main
+	//Main Method
 	public static void main(String[] args) {
 		MainOperations starterClass = new MainOperations();
 		while(true) {
