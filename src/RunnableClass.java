@@ -11,7 +11,7 @@ public class RunnableClass implements Runnable {
 	}
 	
 	public Integer getMessage() {
-		return new Integer(currentMessage);
+		return currentMessage;
 	}
 	
 	public String getName() {

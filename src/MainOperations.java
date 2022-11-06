@@ -45,11 +45,16 @@ public class MainOperations {
 		MainOperations starterClass = new MainOperations();
 		while(true) {
 			try {
-					Thread.sleep(10000L);
+				    //Print from MainOperations map every 50 seconds.
+					//Expect to see 5 MainOp thread outputs before single main thread loop 
+					Thread.sleep(51000L);
 				
 					for(int index=0; index<4; index++) {
-					
+					    //Get runnable from map in MainOperations class
 						RunnableClass x = starterClass.getRunnable(index);
+						//Make sure only one thread can access current runnable
+						//NOTE: main thread and MainOp thread from thread pool would possibly access each runnable at any given time
+						//main thread only gets from the runnable, MainOp thread updates runnable
 						synchronized (x) {
 							System.out.println("MAIN GET -- NAME: " + x.getName());
 							System.out.println("MAIN GET -- CURRENTMESSAGE: " + x.getMessage());
