@@ -1,4 +1,4 @@
-
+//Runnable class for execution of thread
 public class RunnableClass implements Runnable {
 
 	private String name;
